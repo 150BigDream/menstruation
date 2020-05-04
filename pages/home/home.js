@@ -1,66 +1,57 @@
 // pages/home/home.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
+    value: '2018-11-11',
+    week: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    lastMonth: 'lastMonth',
+    nextMonth:'nextMonth',
+    selectVal: '',
+    click:true,
+    click1:true,
+    click2:true,
+    click3:true,
+    click4:true,
+},
+    change () { 
+    var click = this.data.click;
+    this.setData({
+       click: false
+    });
+},
+change1 () { 
+    var click1 = this.data.click1;
+    this.setData({
+       click1: false
+    });
+},
+change2 () { 
+    var click2 = this.data.click2;
+    this.setData({
+       click2: false
+    });
+},
+change3 () { 
+    var click3 = this.data.click3;
+    this.setData({
+       click3: false
+    });
+},
+change4 () { 
+    var click4 = this.data.click4;
+    this.setData({
+       click4: false
+    });
+},
 
-  },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+//组件监听事件
+select(e) {
+   
+    this.setData({
+        selectVal:e.detail
+    })
+},
 
-  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
