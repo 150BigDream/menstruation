@@ -1,0 +1,10 @@
+<!--pages/remind/remind.wxml-->
+<view>
+	<block wx:for="{{orderList}}" wx:key="index">
+		<view class='list-item'>
+			<image src="/assets/images/profile/{{item.icon}}" />
+			<text>{{item.info}}</text>
+			<switch checked="{{switch1Checked}}" color="#ff5777" bindchange="switch1Change" />
+		</view>
+	</block>
+</view>

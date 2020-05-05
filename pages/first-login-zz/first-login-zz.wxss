@@ -1,0 +1,53 @@
+/* pages/first-login-zz/first-login-zz.wxss */
+page{
+  background-color: #ff5777;
+}
+
+.css1{
+  text-align: center;
+  color: white;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.outer{
+
+  background-color: white;
+  border: white;
+  border-radius: 10px;
+  height: 300px;
+  width: 280px;
+  margin-top: 35px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.btn{
+  /* 设置居中 */
+  /* display: block;
+  margin: 0 auto; */
+  display: flex;
+  border-radius: 100px;
+  width: 20px;
+  justify-content: center;
+  background-color: white;
+}
+
+.section{
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+.picker{
+  color: grey;
+  border: 4px;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+
+.font{
+  color: grey;
+  font-size: small;
+}

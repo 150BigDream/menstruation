@@ -1,6 +1,23 @@
 <!--pages/profile/profile.wxml-->
 <view class='profile'>
-  <w-header/>
-  <w-list-view infos="{{serviceList}}"/>
-  <w-list-view infos="{{orderList}}"/>
+	<w-header />
+	<!-- <w-list-view infos="{{serviceList}}" />
+	<w-list-view infos="{{orderList}}" /> -->
+	<!-- TODO 如何传json数据给组件？ -->
+	<view>
+		<block wx:for="{{serviceList}}" wx:key="index">
+			<view class='list-item'>
+				<navigator url="/pages/{{item.url}}/{{item.url}}" open-type="navigate" hover-class="navigator-hover">
+					<image src="/assets/images/profile/{{item.icon}}" />
+					<text>{{item.info}}</text>
+				</navigator>
+			</view>
+		</block>
+		<!-- TODO 这里细节要调 -->
+		<!-- style="display: flex " -->
+		<view class="list-item"  >
+			<image src="/assets/images/profile/cart.png" />
+			<button open-type='feedback'>意见反馈</button>
+		</view>
+	</view>
 </view>

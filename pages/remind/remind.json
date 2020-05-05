@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "w-list-view": "../../profile/childCpns/w-list-view/w-list-view"
+  },
+  "navigationBarTitleText": "提醒",
+  "color": "#000000"
+}

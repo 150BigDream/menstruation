@@ -1,0 +1,14 @@
+.imgStyle {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  display: block;
+}
+
+.center {
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+  /* padding: 10px; */
+  display: block;
+}

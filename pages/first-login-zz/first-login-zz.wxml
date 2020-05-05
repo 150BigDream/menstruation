@@ -1,0 +1,36 @@
+<!--pages/first-login-zz/first-login-zz.wxml-->
+<view class="css1">
+	<text>-------请设置您的经期数据------</text>
+</view>
+
+<view class="outer">
+	<view class="section">
+		<view class="section__title">上次经期开始的时间</view>
+		<picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+			<view class="picker">
+				当前选择: {{date}}
+			</view>
+		</picker>
+	</view>
+
+	<view class="section">
+		<text>经期    </text>
+		<text class="font">您的月经大概持续几天</text>
+		<picker bindchange="bindPickerChange1" value="{{index}}" range="{{array}}">
+			<view class="picker">
+				当前选择：{{array[index]}}
+			</view>
+		</picker>
+	</view>
+
+	<view class="section">
+		<text>周期   </text>
+		<text class="font">两次月经开始日间隔多久</text>
+		<picker bindchange="bindPickerChange2" value="{{index}}" range="{{interval}}">
+			<view class="picker">
+				当前选择：{{array[index]}}
+			</view>
+		</picker>
+	</view>
+</view>
+<button class="btn"  >✔</button>

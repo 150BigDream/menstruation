@@ -1,0 +1,6 @@
+<!--pages/about/about.wxml-->
+<view>
+	<image class="imgStyle" style="margin: 0 auto;" src="/assets/images/profile/zee.png"></image>
+	<text class="center">姨妈助手</text>
+	<text class="center" style="font-size: 30rpx; ">v1.0.0</text>
+</view>
