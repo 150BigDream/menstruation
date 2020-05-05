@@ -1,0 +1,11 @@
+/* pages/logs1/logs1.wxss */
+.center{
+  position: relative;
+  margin-top: 30px;
+  height: 320px;
+}
+.img{
+  position: absolute;
+  margin-bottom: 60px;
+  margin-left: 20px;
+}

@@ -1,0 +1,94 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+<<<<<<< HEAD
+		"urlCheck": false,
+=======
+		"urlCheck": true,
+>>>>>>> 793b24b4f73c29584b9389df0a6e1407adce71fd
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+<<<<<<< HEAD
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wx54a7aa5b6070921b",
+	"projectname": "%E4%BB%A3%E7%A0%812",
+=======
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wx44d7dcb3cbfdca3d",
+	"projectname": "menstruation",
+>>>>>>> 793b24b4f73c29584b9389df0a6e1407adce71fd
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+<<<<<<< HEAD
+=======
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+>>>>>>> 793b24b4f73c29584b9389df0a6e1407adce71fd
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+<<<<<<< HEAD
+		"miniprogram": {
+			"current": -1,
+			"list": []
+=======
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/profile/profile",
+					"pathName": "pages/profile/profile",
+					"scene": null
+				}
+			]
+>>>>>>> 793b24b4f73c29584b9389df0a6e1407adce71fd
+		}
+	}
+}
