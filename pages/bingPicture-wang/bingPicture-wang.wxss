@@ -1,0 +1,71 @@
+
+/* 饼图 */
+.chart_wrapper{
+  position: relative;
+  margin-top: 30px;
+  width:100%;
+  height:240px;
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+}
+.Canvas{
+  position: absolute;
+  z-index: 999998;
+  width: 100%;
+  height: 100%;
+  margin-left: 15%;
+  text-align: center;
+}
+.chart_mark{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mark_item{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 11px;
+  margin-bottom: 2px;
+  color: #505050;
+}
+.mark{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.mark_color1{
+  background-color: #3173e7;
+}
+.mark_color2{
+  background-color: #5eadef;
+}
+.mark_color3{
+  background-color: #fcca4c;
+}
+.mark_color4{
+  background-color: #f1f9fe;
+}
+.mark_color5{
+  background-color: #00ff00;
+
+}
+
+/* 折线图*/
+.canvas-view{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 300px;
+}
+.canvas{
+  width: 100%;
+  height: 640rpx;
+}
+.img{
+  margin-top:50px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}

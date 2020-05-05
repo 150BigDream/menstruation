@@ -1,0 +1,37 @@
+<!--logs.wxml-->
+<view class='chart_wrapper'>
+<view class='chart_wrapper'>
+    <view class='chart_mark'>
+      <view class='mark_item'>
+        <view class='mark mark_color1'></view>
+        <view> 喝水{{drink}}</view>
+      </view>
+      <view class='mark_item'>
+        <view class='mark mark_color2'></view>
+        <view>锻炼 {{exercise}}</view>
+      </view>
+      <view class='mark_item'>
+        <view class='mark mark_color3'></view>
+        <view>早起 {{getupEarly}}</view>
+      </view>
+      <view class='mark_item'>
+        <view class='mark mark_color4'></view>
+        <view>吃早饭 {{breakfast}}</view>
+      </view>
+       <view class='mark_item'>
+        <view class='mark mark_color5'></view>
+        <view>阅读 {{reading}}</view>
+      </view>
+    </view>
+    </view>
+     <canvas class='Canvas' canvas-id="Canvas0"></canvas>
+     <canvas class='Canvas' canvas-id="Canvas1"></canvas>
+     <canvas class='Canvas' canvas-id="Canvas2"></canvas>
+     <canvas class='Canvas' canvas-id="Canvas3"></canvas>
+     <canvas class='Canvas' canvas-id="Canvas4"></canvas>
+     <canvas class='Canvas' canvas-id="Canvas5"></canvas>
+    </view>
+<image src="../../images/zhe.png" class="img"></image>
+
+
+

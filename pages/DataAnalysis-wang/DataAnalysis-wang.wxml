@@ -1,0 +1,32 @@
+<!--pages/index1/index1.wxml-->
+<view class="habit" bindtap="sum">
+<navigator url="../bingPicture-wang/bingPicture-wang">
+<view class="content1">好习惯分析</view>
+<image src="../../images/bing.png"  class="img"></image>
+<view class='content2' >
+<text style="font-size:large;font-weight: bold;">本月内，记录{{day2}}天 \n </text>
+<text>{{breakfast}} \n{{exersize}}\n{{earlyTobed}}\n{{reading}}{{drinkwater}}</text>
+<!-- <image src="../../images/habit.png" class = "img" style="margin-left: 0px; margin-top: 10px;"></image>
+<image src="../../images/habit.png" class = "img" style="margin-left: 50px; margin-top: 10px;"></image>
+<image src="../../images/habit.png" class = "img" style="margin-left: 100px; margin-top: 0px;"></image> -->
+</view>
+</navigator>
+</view>
+
+<view class="habit2">
+
+<view class="content1" style="margin-top:10px">生理周期分析</view>
+<image src="../../images/zhexian.png" class="img"></image>
+<view class="content2">
+<navigator url="../zhexianPicture-wang/zhexianPicture-wang">
+<text style="font-size:large;font-weight: bold; margin-top:20px">周期{{day1}}天\n</text>
+<text >{{day1Advice1}}\n</text>
+<text style="margin-left: 0px;">{{day1Advice2}}</text>
+<view class="adviceImg">
+<image src="../../images/advice.png" class = "img" style="margin-left: 0px;"></image>
+<image src="../../images/advice.png" class = "img" style="margin-left: 50px;"></image>
+<image src="../../images/advice.png" class = "img" style="margin-left: 100px;"></image>
+</view>
+</navigator>
+</view>
+</view>

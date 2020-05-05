@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/login-wang/login-wang",
+    "pages/DataAnalysis-wang/DataAnalysis-wang",
+    "pages/bingPicture-wang/bingPicture-wang",
+    "pages/zhexianPicture-wang/zhexianPicture-wang",
     "pages/home/home",
     "pages/analysis/analysis",
     "pages/profile/profile",
@@ -8,6 +12,7 @@
     "pages/remind/remind",
     "pages/about/about",
     "pages/first-login-zz/first-login-zz"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -42,3 +47,4 @@
     ]
   }
 }
+ 

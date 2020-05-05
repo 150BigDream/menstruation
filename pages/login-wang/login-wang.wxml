@@ -1,0 +1,13 @@
+<!--index.wxml-->
+
+<view>
+<image src="../../images/1.jpg" class="ima">     
+</image>
+</view>
+<view class="userinfo">
+    <button  open-type="getUserInfo" bindgetuserinfo="handGetUserInfo" style="size:100px;">
+     微信登陆 
+     </button>
+   </view>
+
+
