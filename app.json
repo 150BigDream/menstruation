@@ -7,8 +7,6 @@
     "pages/home/home",
     "pages/analysis/analysis",
     "pages/profile/profile",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/remind/remind",
     "pages/about/about",
     "pages/first-login-zz/first-login-zz"

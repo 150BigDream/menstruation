@@ -1,6 +1,22 @@
 <!--pages/profile/profile.wxml-->
 <view class='profile'>
-	<w-header />
+	<view class='header' wx:if="{{userinfo == null}}">
+	  <view class='avatar' >
+	    <image src="/assets/images/profile/avatar.png"/>
+	  </view>
+	  <view class='login-info'>
+	    <view class='login' bindtap="login">登录/注册</view>
+	  </view>
+	</view>
+
+	<view class='header' wx:else>
+	  <view class='avatar' >
+	    <image src="/assets/images/profile/avatar.png"/>
+	  </view>
+	  <view class='login-info'>
+	    <view class='login' bindtap="login">登录/注册</view>
+	  </view>
+	</view>
 	<!-- <w-list-view infos="{{serviceList}}" />
 	<w-list-view infos="{{orderList}}" /> -->
 	<!-- TODO 如何传json数据给组件？ -->
