@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/login-wang/login-wang",
     "pages/DataAnalysis-wang/DataAnalysis-wang",
     "pages/bingPicture-wang/bingPicture-wang",

@@ -7,42 +7,63 @@ Page({
     lastMonth: 'lastMonth',
     nextMonth:'nextMonth',
     selectVal: '',
-    click:true,
-    click1:true,
-    click2:true,
-    click3:true,
-    click4:true,
+    clicks:[true,true,true,true,true],
+    flows:[false,false,false,false,false],
+    pains:[false,false,false,false,false],
+    start:false,
+   
 },
-    change () { 
-    var click = this.data.click;
+start(){
+    var start=this.data.start;
     this.setData({
-       click: false
-    });
+        start:!start
+    })
 },
-change1 () { 
-    var click1 = this.data.click1;
-    this.setData({
-       click1: false
-    });
+level (event) { 
+    var dataset=event.currentTarget.dataset;
+    var index=dataset.index;
+    var flows = this.data.flows;
+    for(var i=0;i<5;i++){
+        var temp='flows['+i+']';
+        if(i<=index){
+            this.setData({
+                [temp]:true
+             });
+        } else{
+            this.setData({
+                [temp]:false
+             });      
+        }
+    }        
 },
-change2 () { 
-    var click2 = this.data.click2;
-    this.setData({
-       click2: false
-    });
+level1 (event) { 
+    var dataset=event.currentTarget.dataset;
+    var index=dataset.index;
+    var pains = this.data.pains;
+    for(var i=0;i<5;i++){
+        var temp='pains['+i+']';
+        if(i<=index){
+            this.setData({
+                [temp]:true
+             });
+        } else{
+            this.setData({
+                [temp]:false
+             });      
+        }
+    }        
 },
-change3 () { 
-    var click3 = this.data.click3;
-    this.setData({
-       click3: false
-    });
+
+change (event) { 
+    var dataset=event.currentTarget.dataset;
+    var index=dataset.index;
+    var clicks = this.data.clicks;
+    var temp='clicks['+index+']'
+       this.setData({
+           [temp]:false
+        });
 },
-change4 () { 
-    var click4 = this.data.click4;
-    this.setData({
-       click4: false
-    });
-},
+
 
 
 //组件监听事件
