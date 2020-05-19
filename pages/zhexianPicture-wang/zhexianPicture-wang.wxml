@@ -1,0 +1,4 @@
+<!--pages/logs1/logs1.wxml-->
+<canvas canvas-id='curve-img' style='width:{{canvasWidth}}px;' class="center"></canvas>
+<image src="../../images/zhe.png" class="img"></image>
+<!-- <text>{{zheAdvice}}</text> -->
