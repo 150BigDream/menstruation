@@ -26,17 +26,22 @@ Page({
 inti(){
     var fin;
     var fsu;
-    request({url:'http://localhost:8080/user',data:{'userid': 1} }).then(res =>{
+    request({url:'http://localhost:8081/user',data:{'userid': 1} }).then(res =>{
         console.log(res);
          fin=res.data.fintervalDay;
          fsu=res.data.fsustainDay;
-         request({url:'http://localhost:8080/top1',data:{'userid': 1} }).then(res =>{
+         request({url:'http://localhost:8081/top1',data:{'userid': 1} }).then(res =>{
             console.log(res);
             if(res!=null){
-                if(res.data.endTime==null)
-                this.setData({
-                    start:true
-                })
+                if(res.data.endTime==null){
+                    var time=res.data.startTime.substring(0,10);
+                    this.setData({
+                        start:true,
+                        sTime:time
+                    })
+                    console.log(this.data.start);
+
+                } 
                 var now=cutil.getUnixTime(cutil.formatDateThis(new Date()));
                 var old=cutil.getUnixTime(res.data.startTime);
                 var apart=cutil.dateCompare(now,old);
@@ -72,16 +77,16 @@ start(){
         this.setData({
             sTime:time
         });
-        request({url:'http://localhost:8080/savetime',data:{'userid': 1} }).then(res =>{
+        request({url:'http://localhost:8081/savetime',data:{'userid': 1} }).then(res =>{
             console.log(res);})
     }
     else{
         this.setData({
             eTime:time
         });
-        request({url:'http://localhost:8080/end',data:{'userid': 1} }).then(res =>{
+        request({url:'http://localhost:8081/end',data:{'userid': 1} }).then(res =>{
             console.log(res);})
-        request({url:'http://localhost:8080/updatef',data:{'userid': 1} }).then(res =>{
+        request({url:'http://localhost:8081/updatef',data:{'userid': 1} }).then(res =>{
                 console.log(res);})
         
         this.inti();
@@ -143,7 +148,7 @@ select(e) {
 },
 onLoad(){
    this.inti();
-},
+  },
 onHide(){
     var index;
     var indexp;
@@ -161,7 +166,7 @@ onHide(){
     }
     console.log(this.data.clickhb)
     if(this.data.clickfap){
-        request({url:'http://localhost:8080/savefap',data:{'userid': 1,'flow':index,'pain':indexp} }).then(res =>{
+        request({url:'http://localhost:8081/savefap',data:{'userid': 1,'flow':index,'pain':indexp} }).then(res =>{
             console.log(res);
             this.data.clickfap=false;
         })       
@@ -169,7 +174,7 @@ onHide(){
     if(this.data.clickhb){
         var that=this;
         setTimeout(function () {
-            request({url:'http://localhost:8080/savehb',data:{'userid': 1,habbits:that.data.clicks} }).then(res =>{
+            request({url:'http://localhost:8081/savehb',data:{'userid': 1,habbits:that.data.clicks} }).then(res =>{
             console.log(res);
             that.data.clickhb=false;
         })
