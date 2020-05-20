@@ -88,6 +88,9 @@
 .calendar-container .grid.gray {
     color: #ccc;
 }
+.calendar-container .grid .wrap{
+    margin: 3rpx auto;
+}
 
 .calendar-container .grid .wrap.select {
     /* background: salmon; */
@@ -95,6 +98,35 @@
     border: 2rpx solid salmon;
     /* color: #fff; */
     width: 70%;
-    margin: 0 auto;
+    
+}
+.forecast {
+    background: rgb(247, 140, 140,0.8);
+    border-radius: 50%;
+    color: #fff;
+    width: 70%;
+   
+}
+.ing{
+    background:#ff5777;
+    border-radius: 50%;
+    color: #fff;
+    width: 70%;
+}
+.bottom{
+    margin-left: 20rpx;
+    color: lightslategray;
+    font-size: 26rpx;
+    display: flex;
+    align-items: center;
+    
+}
+.bottom .fore{
+    font-size: 30rpx;
+    color: rgb(247, 140, 140);
+}
+.bottom .now{
+    font-size: 30rpx;
+    color: #ff5777;
 }
 

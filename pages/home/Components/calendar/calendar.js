@@ -17,7 +17,12 @@ Component({
         nextMonth: {
             type: String,
             value: '>'
-        }
+        },
+        sDay:String,
+        eDay:String,
+        sTime:String,
+        eTime:String,
+        start:Boolean
     },
 
     // 组件的初始数据
@@ -32,7 +37,7 @@ Component({
         title: '',
         //格式化日期
         format: '',
-
+        today:'',
         year: 0,
         month: 0,
         date:0,
@@ -59,7 +64,7 @@ Component({
                 date,
                 title: year + '年' + this.zero(month) + '月'
             })
-            this.createDays(year, month);
+                        this.createDays(year, month);
             this.createEmptyGrids(year, month);
         },
         //默认选中当天 并初始化组件
@@ -69,7 +74,6 @@ Component({
                 month = DATE.getMonth() + 1,
                 date = DATE.getDate(),
                 select = year + '-' + this.zero(month) + '-' + this.zero(date);
-                console.log(select);
 
             this.setData({
                 format: select,
@@ -80,6 +84,7 @@ Component({
                 YEAR: year,
                 MONTH: month,
                 DATE: date,
+                today:select
             })
 
             //初始化日历组件UI

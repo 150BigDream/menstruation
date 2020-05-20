@@ -1,22 +1,22 @@
 <!--pages/home/home.wxml-->
-<view class="top" >预计下次生理期到来还有10天 </view>
-<Calendar id="Calendar" bind:select="select"></Calendar>
+<view class="top" >预计下次生理期到来还有{{residue}}天 </view>
+<Calendar id="Calendar" bind:select="select" start="{{start}}" sDay="{{sDay}}" eDay="{{eDay}}" sTime="{{sTime}}" eTime="{{eTime}}"></Calendar>
 <view class="meau"> 
- <view class="ctrl start"> 经期开始
- <switch type="switch" catchtap="start" color="#ff5777" ></switch >
+ <view class="ctrl start">大姨妈来了
+ <switch type="switch" catchtap="start" checked="{{start}}" color="#ff5777" ></switch >
  </view>
  <view wx:if="{{start}}" class="ctrl ll">流量
     <view  class="sll">
-    <block wx:for='{{flows}}'>
+    <block wx:for='{{flows}}' wx:key="index">
          <image wx:if="{{!item}}" catchtap='level' data-index="{{index}}" src="/assets/images/home/star.png"  style="width:60rpx;height:60rpx"></image>
      <image  wx:if="{{item}}" catchtap='level' data-index="{{index}}" src="/assets/images/home/star1.png"  style="width:60rpx;height:60rpx"></image>
        <text decode="{{true}}">&ensp;</text>
     </block>
     </view>
  </view>
- <view wx:if="{{start}}" class="ctrl tj">   痛经程度
+ <view wx:if="{{start}}" class="ctrl tj">痛经程度
  <view  class="sll">
-    <block wx:for='{{pains}}'>
+    <block wx:for='{{pains}}' wx:key="index">
      <image wx:if="{{!item}}" catchtap='level1' data-index="{{index}}" src="/assets/images/home/star.png"  style="width:60rpx;height:60rpx"></image>
      <image  wx:if="{{item}}" catchtap='level1' data-index="{{index}}" src="/assets/images/home/star1.png"  style="width:60rpx;height:60rpx"></image>
        <text decode="{{true}}">&ensp;</text>
@@ -24,7 +24,7 @@
     </view>
  </view>
  
- <view class="ctrl habby">   好习惯
+ <view class="ctrl habby">好习惯
     <view class="ima" >
      <image  wx:if="{{clicks[0]}}" catchtap='change' data-index="0" src="/assets/images/home/sleep.png"  style="width:60rpx;height:60rpx">
      </image>
