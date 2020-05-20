@@ -1,5 +1,9 @@
 //logs.js
+
  const util = require('../../utils/util.js')
+
+// const util = require('../../utils/util.js')
+
 
 var Charts = require('../../utils/wxcharts');       //引入wxcharts.js  
 const app = getApp()
@@ -97,5 +101,4 @@ Page({
   },
  
   })
-
 

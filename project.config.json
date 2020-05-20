@@ -6,6 +6,7 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": false,
 		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": true,
@@ -25,8 +26,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
-	"appid": "wxe6412f91b5b4cee5",
-	"projectname": "x",
+	"appid": "wx44d7dcb3cbfdca3d",
+	"projectname": "menstruation",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -42,13 +43,49 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/profile/profile",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/remind/remind",
+					"pathName": "pages/remind/remind",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/about/about",
+					"pathName": "pages/about/about",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/first-login-zz/first-login-zz",
+					"pathName": "pages/first-login-zz/first-login-zz",
+					"scene": null
+				}
+			]
 		}
 	}
 }

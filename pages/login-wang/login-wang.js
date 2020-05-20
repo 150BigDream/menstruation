@@ -5,7 +5,8 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    openid:''
+    openid:'',
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -15,7 +16,7 @@ Page({
       hasUserInfo: true
     })
   },
-    handGetUserInfo(e){
+   handGetUserInfo(e){
       const{userInfo} = e.detail;
       wx.setStorageSync('userinfo', userInfo);
       console.log(userInfo.nickName);
@@ -28,26 +29,29 @@ Page({
         confirmText:'是',
         success(res){
           if(res.confirm){
-          //  wx.request({
-          //    url: 'http://localhost:8081/name',
-          //    method:'get',
-          //    data:{
-          //      name:name
-          //    }
-          //   })  
             wx.switchTab({
-              url: "../home/home",
+              url: "../login-wang/login-wang",
             })
-           
           }
-            else if(res.cancel){
-              console.log("登陆失败");
-              wx.showToast({
-                title: '登陆失败',
-                icon: 'loading'
-              })
-            }
-          },
-      })
-    },
+          else if(res.cancel){
+            console.log("登陆失败");
+            wx.showToast({
+              title: '登陆失败',
+              icon: 'loading'
+            })
+          }
+          console.log("jin");
+           wx.request({
+             url: 'http://localhost:8081/name',
+             method:'get',
+             data:{
+               name:name
+             }
+            })  
+            wx.redirectTo({
+              url: "../DataAnalysis-wang/DataAnalysis-wang",
+            })}
+          })
+        }
+    
   })

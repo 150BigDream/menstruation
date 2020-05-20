@@ -16,8 +16,8 @@ Page({
    },
    zheAdvice:'',
    ZheLength:0,
+
   },
-  
   /**
   * 生命周期函数--监听页面加载
   */
@@ -68,6 +68,7 @@ Page({
        if(min>res.data[i])
        min = res.data[i];
      dataValue[i][1] = res.data[i];
+      dataValue[i][1] = res.data[i];
      }
      max = max-min;//算出来最大值和最小值之间的差距
      if(max>7)
@@ -78,7 +79,6 @@ Page({
      this.setData({
       zheAdvice:'生理期相对平稳！'
     })
-
    //初始化 画布
    this.oncInit(ctx, dataValue);
    // 绘制图形表与数据连线
@@ -94,6 +94,8 @@ Page({
    var maxVal = 0,
     totalData = data.length,
     cWidth = this.data.canvasWidth,
+     totalData = data.length;
+   var cWidth = this.data.canvasWidth,
      cHeight = this.data.canvasHeight;
    for (let i = 0; i < totalData; i++) {
      let val = parseInt(data[i][1]);
@@ -107,7 +109,8 @@ Page({
    ctx.beginPath();
    ctx.setLineWidth(1);
    ctx.moveTo(3, cHeight);
-   ctx.lineTo(cWidth , cHeight);
+   //ctx.lineTo(cWidth , cHeight);
+   ctx.lineTo(cWidth + 3, cHeight);
    ctx.stroke();
    ctx.closePath();
    // 设置全局变量
@@ -121,6 +124,7 @@ Page({
        totalY: totalData,
        xMarign: cHeight / (totalX + 1),
        yMarign: cWidth / (totalData)
+      // yMarign: cWidth / totalData
      },
      canvasHeight: cHeight
    });
@@ -195,7 +199,5 @@ Page({
      
    }
   }
-  ,
 
   })
-  
