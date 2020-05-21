@@ -7,9 +7,10 @@ Page({
   data: {
     orderList: [
       { icon: 'cart.png', info: '喝水' },
-      { icon: 'pointer.png', info: '早睡' },
-      { icon: 'vip.png', info: '吃水果' },
-      { icon: 'vip.png', info: '吃药' }
+      { icon: 'pointer.png', info: '运动' },
+      { icon: 'vip.png', info: '早睡' },
+      { icon: 'vip.png', info: '阅读' },
+      { icon: 'vip.png', info: '吃早餐' }
     ]
   },
 

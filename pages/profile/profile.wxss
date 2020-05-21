@@ -60,5 +60,17 @@
   height: 60rpx;
 }
 
+.list-item button{
+  background-color: #fff;
+  bottom: auto;
+  font-size: small;
+  font-style: initial;
+  vertical-align: middle;
+  margin-left: 16rpx;
+}
+
+.list-item button::after{
+  border: none;
+}
 
 

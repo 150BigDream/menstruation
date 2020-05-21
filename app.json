@@ -1,12 +1,9 @@
 {
   "pages": [
-    
     "pages/login-wang/login-wang",
     "pages/DataAnalysis-wang/DataAnalysis-wang",
     "pages/bingPicture-wang/bingPicture-wang",
     "pages/zhexianPicture-wang/zhexianPicture-wang",
-    "pages/home/home",
-    "pages/analysis/analysis",
     "pages/profile/profile",
     "pages/remind/remind",
     "pages/about/about",
@@ -21,29 +18,6 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "debug": true,
-  "tabBar": {
-    "selectedColor": "#ff5777",
-    "list": [
-      {
-        "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "/assets/images/tabbar/home.png",
-        "selectedIconPath": "/assets/images/tabbar/home_active.png"
-      },
-      {
-        "pagePath": "pages/analysis/analysis",
-        "text": "分析",
-        "iconPath": "/assets/images/tabbar/category.png",
-        "selectedIconPath": "/assets/images/tabbar/category_active.png"
-      },
-      {
-        "pagePath": "pages/profile/profile",
-        "text": "我的",
-        "iconPath": "/assets/images/tabbar/profile.png",
-        "selectedIconPath": "/assets/images/tabbar/profile_active.png"
-      }
-    ]
-  }
-}
+  "debug": true
  
+  }

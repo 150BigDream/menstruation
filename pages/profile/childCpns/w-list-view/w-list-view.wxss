@@ -34,13 +34,4 @@
   float: right;
 }
 
-.list-item button{
-  background-color: #fff;
-  
-  vertical-align: middle;
-  margin-left: 16rpx;
-}
 
-.list-item button::after{
-  border: none;
-}

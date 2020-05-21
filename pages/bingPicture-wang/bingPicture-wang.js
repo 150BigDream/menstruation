@@ -1,5 +1,9 @@
 //logs.js
+
+ const util = require('../../utils/util.js')
+
 // const util = require('../../utils/util.js')
+
 
 var Charts = require('../../utils/wxcharts');       //引入wxcharts.js  
 const app = getApp()
@@ -16,28 +20,36 @@ Page({
     // 页面渲染完成
     //使用wx.createContext获取绘图上下文context
     var context = wx.createContext();
+    var time = util.formatTime(new Date());
+    // 再通过setData更改Page()里面的data，动态更新页面的数据
+    this.setData({
+      time: time
+    });
     wx.request({
       url: 'http://localhost:8081/bing',
+      method:'get',
+      data:{
+        time:time,
+        openid:getApp().globalData.openid,
+      },
       success:(res)=>{
         this.setData({
-          drink:res.data[0]
- 
+          drink:res.data[1]
         })
         this.setData({
-          exercise:res.data[1]
+          exercise:res.data[2]
           
         })
         this.setData({
-          getupEarly:res.data[2]
+          getupEarly:res.data[3]
         })
         this.setData({
-          breakfast:res.data[3]
+          breakfast:res.data[4]
          
         })
         this.setData({
-          reading:res.data[4]
+          reading:res.data[5]
         })
-
     // 画饼图
     //var array = [30, 20, 12, 10,2,2];// 数据源
     var colors = ["#f091f0", "#3173e7", "#5eadef", "#fcca4c","#f1f9fe","#00ff00"];// 颜色
@@ -89,5 +101,4 @@ Page({
   },
  
   })
-
 
