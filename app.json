@@ -8,7 +8,6 @@
     "pages/remind/remind",
     "pages/about/about",
     "pages/first-login-zz/first-login-zz"
-
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,5 +18,4 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "debug": true
- 
-  }
+}

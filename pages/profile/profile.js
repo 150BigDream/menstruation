@@ -1,6 +1,6 @@
 // pages/profile/profile.js
 //TODO 图片要改
-const appInstance = getApp()
+const app = getApp()
 
 Page({
   data: {
@@ -30,7 +30,7 @@ Page({
             },
             success(res) {
               console.log(res.data.openID)
-              appInstance.openID=res.data.openID
+              app.openid=res.data.openID
               if (res.data.fsustainDay == null && res.data.fintervalDay == null) {
                 wx.navigateTo({
                   url: '/pages/first-login-zz/first-login-zz',

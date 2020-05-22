@@ -1,10 +1,14 @@
 <!--pages/remind/remind.wxml-->
 <view>
-	<block wx:for="{{orderList}}" wx:key="index">
+	<block wx:for="{{habits}}" wx:key="{{item.id}}">
 		<view class='list-item'>
 			<image src="/assets/images/profile/{{item.icon}}" />
-			<text>{{item.info}}</text>
-			<switch checked="{{switch1Checked}}" color="#ff5777" bindchange="switch1Change" />
+			<text>{{item.title}}</text>
+			<switch checked="{{item.checked}}" data-item="{{ item }}" color="#ff5777" bindchange="onSubscribe" />
 		</view>
 	</block>
 </view>
+
+<!-- <button class="btn" data-item="{{ item }}" bindtap="onSubscribe" hover-class="btn-hover">
+	订阅开课提醒
+</button> -->
