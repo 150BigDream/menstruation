@@ -2,6 +2,7 @@
 import {
     request} from '../../utils/f-request.js'
 import cutil from '../../utils/f-calendar.js'
+var app=getApp()
 Page({
 
   data: {
@@ -26,11 +27,11 @@ Page({
 inti(){
     var fin;
     var fsu;
-    request({url:'http://localhost:8081/user',data:{'userid': 1} }).then(res =>{
+    request({url:'http://localhost:8081/user',data:{'userid': app.globalData.userid} }).then(res =>{
         console.log(res);
          fin=res.data.fintervalDay;
          fsu=res.data.fsustainDay;
-         request({url:'http://localhost:8081/top1',data:{'userid': 1} }).then(res =>{
+         request({url:'http://localhost:8081/top1',data:{'userid': app.globalData.userid} }).then(res =>{
             console.log(res);
             if(res!=null){
                 if(res.data.endTime==null){
@@ -77,16 +78,16 @@ start(){
         this.setData({
             sTime:time
         });
-        request({url:'http://localhost:8081/savetime',data:{'userid': 1} }).then(res =>{
+        request({url:'http://localhost:8081/savetime',data:{'userid': app.globalData.userid} }).then(res =>{
             console.log(res);})
     }
     else{
         this.setData({
             eTime:time
         });
-        request({url:'http://localhost:8081/end',data:{'userid': 1} }).then(res =>{
+        request({url:'http://localhost:8081/end',data:{'userid': app.globalData.userid} }).then(res =>{
             console.log(res);})
-        request({url:'http://localhost:8081/updatef',data:{'userid': 1} }).then(res =>{
+        request({url:'http://localhost:8081/updatef',data:{'userid': app.globalData.userid} }).then(res =>{
                 console.log(res);})
         
         this.inti();
@@ -166,7 +167,7 @@ onHide(){
     }
     console.log(this.data.clickhb)
     if(this.data.clickfap){
-        request({url:'http://localhost:8081/savefap',data:{'userid': 1,'flow':index,'pain':indexp} }).then(res =>{
+        request({url:'http://localhost:8081/savefap',data:{'userid': app.globalData.userid,'flow':index,'pain':indexp} }).then(res =>{
             console.log(res);
             this.data.clickfap=false;
         })       
@@ -174,7 +175,7 @@ onHide(){
     if(this.data.clickhb){
         var that=this;
         setTimeout(function () {
-            request({url:'http://localhost:8081/savehb',data:{'userid': 1,habbits:that.data.clicks} }).then(res =>{
+            request({url:'http://localhost:8081/savehb',data:{'userid': app.globalData.userid,habbits:that.data.clicks} }).then(res =>{
             console.log(res);
             that.data.clickhb=false;
         })
