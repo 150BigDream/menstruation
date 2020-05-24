@@ -1,4 +1,5 @@
 // pages/index1/index1.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
@@ -15,10 +16,20 @@ Page({
    reading:'',
    drinkwater:'',
   },
+  
   onLoad:function(){
+    var time = util.formatTime(new Date());
+    // 再通过setData更改Page()里面的data，动态更新页面的数据
+    this.setData({
+      time: time
+    });
     wx.request({
       url: 'http://localhost:8081/day',
       method:'get',
+      data:{
+      time:time,
+      openid:getApp().globalData.openid,
+      },
       success:(res) =>{
         this.setData({
           day1: res.data.day1
@@ -79,5 +90,5 @@ Page({
         })
       }
     })
-   }
-})
+   },
+  })

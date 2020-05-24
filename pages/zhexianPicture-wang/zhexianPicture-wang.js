@@ -15,8 +15,9 @@ Page({
      data: []
    },
    zheAdvice:'',
+   ZheLength:0,
+
   },
-  
   /**
   * 生命周期函数--监听页面加载
   */
@@ -41,23 +42,32 @@ Page({
    ctx.setLineJoin('miter')
    var max = 0;
    var min = 1000;
-   var dataValue = [
-     ["第一次", 0],
-     ["第二次", 0],
-     ["第三次", 0],
-     ["第四次", 0],
-     ["第五次", 0],
-     ["第六次", 0]
-   ];
+   var dataValue = [];
    wx.request({
     url: 'http://localhost:8081/zhexian',
     method:'get',
+    data:{
+      openid:getApp().globalData.openid,
+    },
     success:(res) =>{
+      if(res.data.length ===1)
+       dataValue = [["第一次",0]];
+      else if(res.data.length ===2)
+       dataValue =[["第一次",0],["第二次",0]];
+     else if(res.data.length ===3)
+       dataValue =[["第一次",0],["第二次",0],["第三次",0]];
+      else if(res.data.length ===4)
+       dataValue =[["第一次",0],["第二次",0],["第三次",0],["第四次",0]];
+       else if(res.data.length ===5)
+       dataValue =[["第一次",0],["第二次",0],["第三次",0],["第四次",0],["第五次",0]];
+       else if(res.data.length ===6)
+       dataValue =[["第一次",0],["第二次",0],["第三次",0],["第四次",0],["第五次",0],["第六次",0]];
      for(var i=0;i<res.data.length;i++){
        if(max<res.data[i])
        max = res.data[i];
        if(min>res.data[i])
        min = res.data[i];
+     dataValue[i][1] = res.data[i];
       dataValue[i][1] = res.data[i];
      }
      max = max-min;//算出来最大值和最小值之间的差距
@@ -82,6 +92,8 @@ Page({
    let totalX = 6;
    // 设置最大值、宽度、高度值
    var maxVal = 0,
+    totalData = data.length,
+    cWidth = this.data.canvasWidth,
      totalData = data.length;
    var cWidth = this.data.canvasWidth,
      cHeight = this.data.canvasHeight;
@@ -97,6 +109,7 @@ Page({
    ctx.beginPath();
    ctx.setLineWidth(1);
    ctx.moveTo(3, cHeight);
+   //ctx.lineTo(cWidth , cHeight);
    ctx.lineTo(cWidth + 3, cHeight);
    ctx.stroke();
    ctx.closePath();
@@ -110,7 +123,8 @@ Page({
        totalX: totalX,
        totalY: totalData,
        xMarign: cHeight / (totalX + 1),
-       yMarign: cWidth / totalData
+       yMarign: cWidth / (totalData)
+      // yMarign: cWidth / totalData
      },
      canvasHeight: cHeight
    });
@@ -185,7 +199,5 @@ Page({
      
    }
   }
-  ,
 
   })
-  

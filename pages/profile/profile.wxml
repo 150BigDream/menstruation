@@ -1,9 +1,25 @@
 <!--pages/profile/profile.wxml-->
-<view class='profile'>
-	<w-header />
-	<!-- <w-list-view infos="{{serviceList}}" />
-	<w-list-view infos="{{orderList}}" /> -->
-	<!-- TODO 如何传json数据给组件？ -->
+<view class='profile' >
+
+	<view class='header' wx:if="{{userinfo == null}}">
+		<view class='avatar'>
+			<image src="/assets/images/profile/avatar.png" />
+		</view>
+		<view class='login-info'>
+			<!-- <view class='login' bindtap="login">登录/注册</view> -->
+			<button class="login" open-type="getUserInfo" bindgetuserinfo="bindgetUserInfo" lang="zh_CN">登陆/注册</button>
+		</view>
+	</view>
+
+	<view class='header' wx:else>
+		<view class='avatar'>
+			<open-data type="userAvatarUrl"></open-data>
+		</view>
+		<view class='login-info'>
+			<open-data type="userNickName"></open-data>
+		</view>
+	</view>
+
 	<view>
 		<block wx:for="{{serviceList}}" wx:key="index">
 			<view class='list-item'>
@@ -13,10 +29,8 @@
 				</navigator>
 			</view>
 		</block>
-		<!-- TODO 这里细节要调 -->
-		<!-- style="display: flex " -->
-		<view class="list-item"  >
-			<image src="/assets/images/profile/cart.png" />
+
+		<view class="list-item">
 			<button open-type='feedback'>意见反馈</button>
 		</view>
 	</view>

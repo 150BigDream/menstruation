@@ -1,4 +1,5 @@
 {
+	"cloudfunctionRoot": "cloudfunctions/",
 	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
@@ -83,6 +84,13 @@
 					"id": -1,
 					"name": "pages/first-login-zz/first-login-zz",
 					"pathName": "pages/first-login-zz/first-login-zz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]
